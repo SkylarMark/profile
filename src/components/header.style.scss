@@ -1,0 +1,66 @@
+.hero {
+    background-color: green($color: #000000);
+
+    #col-1 {
+        height: 75vh;
+        background-color: #ffffff;
+    }
+
+    #col-2 {
+        height: 75vh;
+        background-color: #77b7ff;
+    }
+
+}
+
+#home-section {
+    height: 100vh;
+
+    .imgSection {
+        z-index: 1;
+        position: absolute;
+        height: 95vh;
+        width: 54vw;
+        transform: translate(50%, -68%);
+
+        .imgContent {
+            position: absolute;
+            top: 20vh;
+            float: left;
+            font-size: 5ex;
+            z-index: 1;
+
+            p {
+                font-size: 1.4ex;
+                text-align: left;
+            }
+
+            span {
+                color: #77b7ff;
+                font-weight: 1000;
+            }
+        }
+
+        img {
+            float: right;
+            width: auto;
+            height: 100%;
+        }
+
+        @media (max-width: '1320px') {
+
+            img {
+                z-index: 0;
+                filter: brightness(50%);
+            }
+
+            .imgContent {
+                color: white;
+            }
+
+            p {
+                color: white;
+            }
+        }
+    }
+}
