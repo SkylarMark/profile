@@ -1,0 +1,46 @@
+.aboutMe {
+    min-height: 100vh;
+
+    h1 {
+        font-weight: 800;
+    }
+
+    h3 {
+        font-size: 3ex;
+        font-weight: 200;
+    }
+
+    p {
+        font-size: 1.8ex;
+        color: grey;    
+    }
+
+    .aboutMeCard {
+        min-width: 8vw;
+        max-width: 19rem;
+        float: none;
+        margin: 0 auto;
+
+        h5 {
+            font-size: 2ex;
+        }
+
+        p {
+            font-size: 1.8ex;
+            color: grey;
+            justify-content: baseline;
+        }
+    }
+}
+
+.ProjectsDone {
+    width: 100vw;
+    min-height: 10vh;
+    background-color: #0075f6;
+    color: #ffffff;
+
+    h1 {
+        font-size: 3.5ex;
+        font-weight: 300;
+    }
+}

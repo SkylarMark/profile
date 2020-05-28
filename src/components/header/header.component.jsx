@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 
 import { useMediaQuery } from 'react-responsive'
 
-import { Navbar, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, Row, Col } from 'react-bootstrap';
 
 import './header.style.scss'
 
 export default function Header(props) {
     return (
-        <div>
+        <div id={props.id} className="mb-5" >
             <NavigationBar websiteName={props.websiteName} />
             <Hero name={props.name} description={props.description} img={props.img} />
         </div>
@@ -22,7 +22,7 @@ function NavigationBar(props) {
 
     // Hook for Color With Query
     var navColorMedia = useMediaQuery({
-        query: '(min-device-width: 990px)'
+        query: '(min-device-width: 991px)'
     })
 
     // On Scroll Funtion
@@ -43,8 +43,8 @@ function NavigationBar(props) {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto" />
                 <Nav>
-                <Nav.Link href="#home-section"> Home </Nav.Link>
-                <Nav.Link href="#deets"> About </Nav.Link>
+                <Nav.Link href="#home"> Home </Nav.Link>
+                <Nav.Link href="#about"> About </Nav.Link>
                 <Nav.Link href="#deets"> Skills </Nav.Link>
                 <Nav.Link href="#deets"> Projects </Nav.Link>
                 <Nav.Link href="#deets"> My Blog </Nav.Link>
@@ -58,17 +58,17 @@ function NavigationBar(props) {
 function Hero(props) {
     return (
         <div id="home-section">
-        <section className="hero text-center">
-            <Row>
-                <Col id="col-1" xs="8" sm="7">
-                    
-                </Col>
-                <Col id="col-2" xs="4" sm="5">
-                    
-                </Col>
-            </Row>
-            <HeroProfile name={props.name} description={props.description} img={props.img} />
-        </section>
+            <section className="hero text-center">
+                <Row>
+                    <Col id="col-1" xs="8" sm="7">
+                        
+                    </Col>
+                    <Col id="col-2" xs="4" sm="5">
+                        
+                    </Col>
+                </Row>
+                <HeroProfile name={props.name} description={props.description} img={props.img} />
+            </section>
         </div>
     );
 }
@@ -82,4 +82,4 @@ function HeroProfile(props) {
     )
 }
 
-export { NavigationBar, Hero, HeroProfile }
+export { NavigationBar, Hero }

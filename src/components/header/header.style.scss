@@ -1,5 +1,5 @@
 .hero {
-    background-color: green($color: #000000);
+
 
     #col-1 {
         height: 75vh;
@@ -14,14 +14,17 @@
 }
 
 #home-section {
-    height: 100vh;
+    min-height: 100vh;
 
     .imgSection {
         z-index: 1;
         position: absolute;
         height: 95vh;
         width: 54vw;
-        transform: translate(50%, -68%);
+        transform: translate( 50%, -68%);
+        -webkit-box-shadow: 39px 30px 57px -55px rgba(0,0,0,0.75);
+        -moz-box-shadow: 39px 30px 57px -55px rgba(0,0,0,0.75);
+        box-shadow: 39px 30px 57px -55px rgba(0,0,0,0.75);
 
         .imgContent {
             position: absolute;
