@@ -62,8 +62,8 @@ const SkillsData = {
         },
         {
             title: "Back-End",
-            name: ["MySQL","mongoDB","PHP"],
-            img: ["mysql", "mongodb", "php"]
+            name: ["MySQL","mongoDB"],
+            img: ["mysql", "mongodb"]
         },
         {
             title: "CMS",
@@ -77,13 +77,13 @@ const SkillsData = {
         },
         {
             title: "Android - IOS",
-            name: ["Flutter","Dart"],
-            img: ["flutter", "dart"]
+            name: ["Flutter"],
+            img: ["flutter"]
         },
         {
             title: "Programming Languages",
-            name: ["C","C++","Python"],
-            img: ["c", "cpp", "python"]
+            name: ["C","C++","PHP","Python","Dart"],
+            img: ["c", "cpp", "php", "python", "dart"]
         },
         {
             title: "IOT",
