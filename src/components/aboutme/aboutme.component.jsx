@@ -7,12 +7,15 @@ import { Row, Col } from 'react-bootstrap';
 export default function AboutMe(props) {
     return(
         <div id={props.id} className="aboutMe pb-0 p-5">
-            <AboutBox description={props.description} />
+            <AboutBox description={props.description} cardData={props.cardData} ProjectsDone={props.ProjectsDone} />
         </div>
     );
 }
 
 function AboutBox(props) {
+
+    const cardData = props.cardData;
+
     return (
         <div>
             <div className="p-5">
@@ -28,10 +31,10 @@ function AboutBox(props) {
                 </Row>
             </div>
             <Row>
-                <IconCard center={false} CardIcon="https://img.icons8.com/search" CardTitle="Web Development" CardDescription="A small river named Duden flows by their place and supplies. " />
-                <IconCard center={false} CardIcon="https://img.icons8.com/search" CardTitle="Web Development" CardDescription="A small river named Duden flows by their place and supplies. " />
-                <IconCard center={false} CardIcon="https://img.icons8.com/search" CardTitle="Web Development" CardDescription="A small river named Duden flows by their place and supplies. " />
-                <ProjectsDone />
+                {cardData.map((props, index) => {
+                    return <IconCard key={index+"_key"} center={props.center} CardIcon={props.CardIcon} CardTitle={props.CardTitle} CardDescription={props.CardDescription} />
+                })}
+                <ProjectsDone ProjectsDone={props.ProjectsDone} />
             </Row>
         </div>
     )
@@ -68,11 +71,11 @@ function IconCard(props) {
     );
 }
 
-function ProjectsDone() {
+function ProjectsDone(props) {
     return (
         <div className="ProjectsDone text-center p-3 mt-5">
             <h1> Projects </h1>
-            <h5> 5 </h5>
+            <h5> {props.ProjectsDone} </h5>
         </div>
     );
 }
