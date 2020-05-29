@@ -30,11 +30,15 @@
             color: grey;
             justify-content: baseline;
         }
+
+        img {
+            width: 100%;
+        }
     }
 }
 
 .ProjectsDone {
-    width: 100vw;
+    width: 100%;
     min-height: 10vh;
     background-color: #0075f6;
     color: #ffffff;

@@ -9,7 +9,6 @@ import './header.style.scss'
 export default function Header(props) {
     return (
         <div id={props.id} className="mb-5" >
-            <NavigationBar websiteName={props.websiteName} />
             <Hero name={props.name} description={props.description} img={props.img} />
         </div>
     );
@@ -45,10 +44,7 @@ function NavigationBar(props) {
                 <Nav>
                 <Nav.Link href="#home"> Home </Nav.Link>
                 <Nav.Link href="#about"> About </Nav.Link>
-                <Nav.Link href="#deets"> Skills </Nav.Link>
-                <Nav.Link href="#deets"> Projects </Nav.Link>
-                <Nav.Link href="#deets"> My Blog </Nav.Link>
-                <Nav.Link href="#deets"> Contact </Nav.Link>
+                <Nav.Link href="#skill"> Skill </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

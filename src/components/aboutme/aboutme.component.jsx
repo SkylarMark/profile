@@ -3,6 +3,9 @@ import React from 'react';
 import './aboutme.style.scss';
 import { Row, Col } from 'react-bootstrap';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function AboutMe(props) {
     return(
@@ -18,23 +21,21 @@ function AboutBox(props) {
 
     return (
         <div>
-            <div className="p-5">
+            <div className="p-sm-5">
                 <h3>Welcome</h3>
-                <h1  className="mt-4 pl-3">About Me</h1>
+                <h1  className="mt-4 pl-sm-3">About Me</h1>
                 <hr/>
                 <Row>
-                    <Col sm="0" lg="6" />
-                    <Col sm="12" lg="6" >
+                <Col className="order-lg-1 order-12" sm="12" lg="6"> <ProjectsDone ProjectsDone={props.ProjectsDone} /> </Col>
+                    <Col className="order-lg-12 order-1" sm="12" lg="6" >
                         <p className="mt-4 text-justify" >{props.description}</p>
                     </Col>
-
                 </Row>
             </div>
             <Row>
                 {cardData.map((props, index) => {
                     return <IconCard key={index+"_key"} center={props.center} CardIcon={props.CardIcon} CardTitle={props.CardTitle} CardDescription={props.CardDescription} />
                 })}
-                <ProjectsDone ProjectsDone={props.ProjectsDone} />
             </Row>
         </div>
     )
@@ -63,7 +64,7 @@ function IconCard(props) {
     return (
         <Col  sm="12" md="4">
             <div className="card p-4 aboutMeCard" >
-                <div className={centered + " mr-3 mb-4 "} ><img alt="" src={props.CardIcon} /></div>
+                <div className={centered + " mr-3 mb-4 "} ><img alt="" src={props.CardIcon} width="100%" /></div>
                 <h5 className="mb-3" > { props.CardTitle } </h5>
                 <p> { props.CardDescription } </p>
             </div>
@@ -73,9 +74,16 @@ function IconCard(props) {
 
 function ProjectsDone(props) {
     return (
-        <div className="ProjectsDone text-center p-3 mt-5">
-            <h1> Projects </h1>
-            <h5> {props.ProjectsDone} </h5>
+        <div className="ProjectsDone p-3 mt-5">
+            <Row>
+                <Col>
+                    <h1> Projects Done : {props.ProjectsDone} </h1>
+                </Col>
+                <Col className="my-auto pr-5" xs="2">
+                    <h1> <FontAwesomeIcon icon={faCaretRight} /> </h1>                
+                </Col>
+            </Row>
         </div>
     );
 }
+

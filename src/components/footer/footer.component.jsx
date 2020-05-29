@@ -35,13 +35,13 @@ function FooterBar(props) {
 function FooterIcon(props) {
     return (
         <>
-        <a href={props.href} >
             <Col xs="4" sm="1" >
                 <div className="footerIcon">
-                    <img alt={props.alt} src={props.img} />
+                    <a href={props.href} target="_blank" rel="noopener noreferrer">
+                        <img alt={props.alt} src={props.img} target="_blank" />
+                    </a>
                 </div>
             </Col>
-        </a>
         </>
     );
 }

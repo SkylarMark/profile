@@ -1,10 +1,18 @@
 import aiChan from './footer/ai.png'
+import webDev from '../assets/webdev.png'
+import mobDev from '../assets/mobdev.png'
+import desktopDev from '../assets/desktopdev.png'
+
+import facebook from '../assets/facebook.png'
+import twitter from '../assets/twitter.png'
+
+const testImg = 'https://www.pngitem.com/pimgs/m/28-288789_transparent-png-person-standing-standing-png-download.png';
 
 const HeaderData = {
     websiteName:"",
     name: "Samyak Joshi",
-    description:"A Web Developer",
-    img:"https://www.pngitem.com/pimgs/m/28-288789_transparent-png-person-standing-standing-png-download.png"
+    description:"A Developer",
+    img: testImg
 }
 
 const AboutData = {
@@ -12,24 +20,24 @@ const AboutData = {
     ProjectsDone: 5,
     cardData: [
         {
-            center:false,
-            CardIcon:"https://img.icons8.com/search",
+            center: true,
+            CardIcon: webDev,
             CardTitle:"Web Development",
-            CardDescription:"A small river named Duden flows by their place and supplies.",
+            CardDescription:"There are three responses to a piece of design – yes, no, and WOW! Wow is the one to aim for.",
     
         },
         {
-            center:false,
-            CardIcon:"https://img.icons8.com/search",
+            center: true,
+            CardIcon: mobDev,
             CardTitle:"App Development",
-            CardDescription:"A small river named Duden flows by their place and supplies.",
+            CardDescription:"Mobile is becoming not only the new digital hub, but also the bridge to the physical world.",
     
         },
         {
-            center:false,
-            CardIcon:"https://img.icons8.com/search",
+            center: true,
+            CardIcon: desktopDev,
             CardTitle:"Desktop App Development",
-            CardDescription:"A small river named Duden flows by their place and supplies.",
+            CardDescription:"The only software that's worth making is software that does something new.",
     
         },
     ]
@@ -64,18 +72,28 @@ const SkillsData = {
         },
         {
             title: "Frameworks",
-            name: ["Code Igniter"],
-            img: ["codeIgniter"]
+            name: ["Code Igniter","DJango"],
+            img: ["codeIgniter","django"]
         },
         {
-            title: "Android",
+            title: "Android - IOS",
             name: ["Flutter","Dart"],
             img: ["flutter", "dart"]
         },
         {
+            title: "Programming Languages",
+            name: ["C","C++","Python"],
+            img: ["c", "cpp", "python"]
+        },
+        {
+            title: "IOT",
+            name: ["Arduino","Raspberry Pi"],
+            img: ["arduino", "raspberrypi"]
+        },
+        {
             title: "Other",
-            name: ["Github","Photoshop","Davinci Resolve", "After Effects", "Blender (3D Animation Software)"],
-            img: ["github", "photoshop", "davinci", "afterEffects", "blender"]
+            name: ["Github","Photoshop","Davinci Resolve", "Adobe After Effects", "Adobe XD", "Adobe Illustrator", "Blender (3D Animation Software)"],
+            img: ["github", "photoshop", "davinci", "afterEffects", "adobexd", "illustrator" ,"blender"]
         }
     ], 
 }
@@ -83,14 +101,14 @@ const SkillsData = {
 const FooterData = {
     socialLinks:[
         {
-            alt:"Google",
-            img: aiChan,
-            href:"https://google.com",
+            alt:"Facebook",
+            img: facebook,
+            href:"https://facebook.com/sam.joshi.927",
         },
         {
-            alt:"Google",
-            img: aiChan,
-            href:"https://youtube.com",
+            alt:"Twitter",
+            img: twitter,
+            href:"https://twitter.com/Skylar_Mark1",
         },
     ]
 }
