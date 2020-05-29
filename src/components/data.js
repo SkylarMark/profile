@@ -1,4 +1,4 @@
-import aiChan from './footer/ai.png';
+import aiChan from './footer/ai.png'
 
 const HeaderData = {
     websiteName:"",
@@ -8,7 +8,7 @@ const HeaderData = {
 }
 
 const AboutData = {
-    description:"Samyak Joshi a Developer born on 20 August 1999, as of currently working on self-development, learning, and working on projects with programming languages this fascinating world holds. Fast Learner and Fast Implementer is a title I got from my college for my work.",
+    description:"Hey, there I am Samyak Joshi a Developer, born on 20 August 1999 as of currently working on self-development, learning, and working on projects with programming languages that always fascinated me. They are words but yet give you the power to bring life to machines.",
     ProjectsDone: 5,
     cardData: [
         {
@@ -39,23 +39,43 @@ const SkillsData = {
     SkillCardData: [
         {
             title: "Html",
-            name: ["Html","React"],
-            img: [aiChan, aiChan, aiChan, aiChan]
+            name: ["Html 5","JSX"],
+            img: [ "html", "react"]
         },
         {
             title: "CSS",
-            name: ["Bootstrap","Material UI"],
-            img: [aiChan, aiChan, aiChan, aiChan, aiChan, aiChan]
+            name: ["CSS3","Bootstrap","SASS"],
+            img: [ "css", "bootstrap", "sass"]
         },
         {
-            title: "Java Script",
-            name: ["Node Js","Electron", "React JS", "Angular JS", "Express JS"],
-            img: [aiChan, aiChan, aiChan, aiChan, aiChan, aiChan]
+            title: "Javascript",
+            name: ["Node Js","Electron", "React JS", "Angular JS", "Express JS","Javascript","Jquery"],
+            img: [ "nodeJs", "electron", "react", "angular", "express", "javascript", "jquery"]
+        },
+        {
+            title: "Back-End",
+            name: ["MySQL","mongoDB","PHP"],
+            img: ["mysql", "mongodb", "php"]
+        },
+        {
+            title: "CMS",
+            name: ["Joomla","Wordpress"],
+            img: [ "joomla", "wordpress"]
+        },
+        {
+            title: "Frameworks",
+            name: ["Code Igniter"],
+            img: ["codeIgniter"]
         },
         {
             title: "Android",
             name: ["Flutter","Dart"],
-            img: [aiChan, aiChan]
+            img: ["flutter", "dart"]
+        },
+        {
+            title: "Other",
+            name: ["Github","Photoshop","Davinci Resolve", "After Effects", "Blender (3D Animation Software)"],
+            img: ["github", "photoshop", "davinci", "afterEffects", "blender"]
         }
     ], 
 }
@@ -66,6 +86,11 @@ const FooterData = {
             alt:"Google",
             img: aiChan,
             href:"https://google.com",
+        },
+        {
+            alt:"Google",
+            img: aiChan,
+            href:"https://youtube.com",
         },
     ]
 }

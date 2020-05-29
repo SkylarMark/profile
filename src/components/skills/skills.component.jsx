@@ -42,8 +42,8 @@ function SkillCardElement(props) {
 
 function SkillCardIcon(props) {
     return (
-        <Col sm='2' >
-            <div> <img alt="" src={props.image} width="100%" /> </div>
+        <Col className="mt-5" md="4" xl='2' >
+            <div> <embed src={'svg/'+props.image+".svg"} /> </div>
             <div className="mt-3" > <h5> {props.name} </h5> </div>
         </Col>
     );
