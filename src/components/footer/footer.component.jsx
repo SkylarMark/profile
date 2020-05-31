@@ -16,14 +16,13 @@ export default function Footer(props) {
     );
 }
 
-function FooterBar(props) {
-    const socialLinks = props.socialLinks;
+function FooterBar({socialLinks}) {
     return (
         <div className="footerBar text-white text-center p-5">
             <div>
                 <Row className="text-center justify-content-center" noGutters={true}>
-                {socialLinks.map((props, index) => {
-                    return <FooterIcon key={index+"_key"} alt={props.alt} img={props.img} href={props.href} />
+                {socialLinks.map(({...Data}, index) => {
+                    return <FooterIcon key={index+"_key"} {...Data} />
                 })}
                 </Row>
             </div>
@@ -32,13 +31,13 @@ function FooterBar(props) {
     );
 }
 
-function FooterIcon(props) {
+function FooterIcon({href, alt, img}) {
     return (
         <>
             <Col xs="4" sm="1" >
                 <div className="footerIcon">
-                    <a href={props.href} target="_blank" rel="noopener noreferrer">
-                        <img alt={props.alt} src={props.img} target="_blank" />
+                    <a href={href} target="_blank" rel="noopener noreferrer">
+                        <img alt={alt} src={img} target="_blank" />
                     </a>
                 </div>
             </Col>

@@ -1,3 +1,5 @@
+$primay: #0075f6;
+
 .aboutMe {
     min-height: 100vh;
 
@@ -40,7 +42,7 @@
 .ProjectsDone {
     width: 100%;
     min-height: 10vh;
-    background-color: #0075f6;
+    background-color: $primay;
     color: #ffffff;
 
     h1 {
@@ -48,3 +50,23 @@
         font-weight: 300;
     }
 }
+
+#projects-done {
+    &:hover {
+        svg {
+            animation: repeat-leftRight 1s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes repeat-leftRight {
+    0% {
+        margin-left: 0rem;
+    }
+    50% {
+        margin-left: 1rem;
+    }
+    100% {
+        margin-left: 0rem;
+    }
+  }

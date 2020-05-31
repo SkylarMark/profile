@@ -1,10 +1,45 @@
-import aiChan from './footer/ai.png'
+import React from 'react';
+
 import webDev from '../assets/webdev.png'
 import mobDev from '../assets/mobdev.png'
 import desktopDev from '../assets/desktopdev.png'
-
 import facebook from '../assets/facebook.png'
 import twitter from '../assets/twitter.png'
+
+// SVG
+    import { ReactComponent as Html5Icon }          from '../assets/svg/html.svg';
+    import { ReactComponent as ReactIcon }          from '../assets/svg/react.svg';
+    import { ReactComponent as CssIcon }            from '../assets/svg/css.svg';
+    import { ReactComponent as BootstrapIcon }      from '../assets/svg/bootstrap.svg';
+    import { ReactComponent as SASSIcon }           from '../assets/svg/sass.svg';
+    import { ReactComponent as NodeJSIcon }         from '../assets/svg/nodeJs.svg';
+    import { ReactComponent as ElectronIcon }       from '../assets/svg/electron.svg';
+    import { ReactComponent as AngularIcon }        from '../assets/svg/angular.svg';
+    import { ReactComponent as ExpressIcon }        from '../assets/svg/express.svg';
+    import { ReactComponent as JavascriptIcon }     from '../assets/svg/javascript.svg';
+    import { ReactComponent as JqueryIcon }         from '../assets/svg/jquery.svg';
+    import { ReactComponent as MysqlIcon }          from '../assets/svg/mysql.svg';
+    import { ReactComponent as MongodbIcon }        from '../assets/svg/mongodb.svg';
+    import { ReactComponent as JoomlaIcon }         from '../assets/svg/joomla.svg';
+    import { ReactComponent as WordpressIcon }      from '../assets/svg/wordpress.svg';
+    import { ReactComponent as CodeIgniterIcon }    from '../assets/svg/codeIgniter.svg';
+    import { ReactComponent as DjangoIcon }         from '../assets/svg/django.svg';
+    import { ReactComponent as FlutterIcon }        from '../assets/svg/flutter.svg';
+    import { ReactComponent as CIcon }              from '../assets/svg/c.svg';
+    import { ReactComponent as CppIcon }            from '../assets/svg/cpp.svg';
+    import { ReactComponent as PythonIcon }         from '../assets/svg/python.svg';
+    import { ReactComponent as DartIcon }           from '../assets/svg/dart.svg';
+    import { ReactComponent as PhpIcon }            from '../assets/svg/php.svg';
+    import { ReactComponent as ArduinoIcon }        from '../assets/svg/arduino.svg';
+    import { ReactComponent as RaspberrypiIcon }    from '../assets/svg/raspberrypi.svg';
+    import { ReactComponent as GithubIcon }         from '../assets/svg/github.svg';
+    import { ReactComponent as PhotoshopIcon }      from '../assets/svg/photoshop.svg';
+    import { ReactComponent as DavinciIcon }        from '../assets/svg/davinci.svg';
+    import { ReactComponent as AdobexdIcon }        from '../assets/svg/adobexd.svg';
+    import { ReactComponent as IllustratorIcon }    from '../assets/svg/illustrator.svg';
+    import { ReactComponent as AfterEffectsIcon }   from '../assets/svg/afterEffects.svg';
+    import { ReactComponent as BlenderIcon }        from '../assets/svg/blender.svg';
+
 
 const testImg = 'https://www.pngitem.com/pimgs/m/28-288789_transparent-png-person-standing-standing-png-download.png';
 
@@ -48,52 +83,52 @@ const SkillsData = {
         {
             title: "Html",
             name: ["Html 5","JSX"],
-            img: [ "html", "react"]
+            img: [ <Html5Icon /> , <ReactIcon />]
         },
         {
             title: "CSS",
             name: ["CSS3","Bootstrap","SASS"],
-            img: [ "css", "bootstrap", "sass"]
+            img: [ <CssIcon />, <BootstrapIcon />, <SASSIcon />]
         },
         {
             title: "Javascript",
             name: ["Node Js","Electron", "React JS", "Angular JS", "Express JS","Javascript","Jquery"],
-            img: [ "nodeJs", "electron", "react", "angular", "express", "javascript", "jquery"]
+            img: [ <NodeJSIcon /> , <ElectronIcon />, <ReactIcon />, <AngularIcon />, <ExpressIcon />, <JavascriptIcon />, <JqueryIcon />]
         },
         {
             title: "Back-End",
             name: ["MySQL","mongoDB"],
-            img: ["mysql", "mongodb"]
+            img: [<MysqlIcon />, <MongodbIcon />]
         },
         {
             title: "CMS",
             name: ["Joomla","Wordpress"],
-            img: [ "joomla", "wordpress"]
+            img: [ <JoomlaIcon />, <WordpressIcon />]
         },
         {
             title: "Frameworks",
             name: ["Code Igniter","DJango"],
-            img: ["codeIgniter","django"]
+            img: [ <CodeIgniterIcon />, <DjangoIcon />]
         },
         {
             title: "Android - IOS",
             name: ["Flutter"],
-            img: ["flutter"]
+            img: [ <FlutterIcon /> ]
         },
         {
             title: "Programming Languages",
             name: ["C","C++","PHP","Python","Dart"],
-            img: ["c", "cpp", "php", "python", "dart"]
+            img: [ <CIcon />, <CppIcon />, <PhpIcon />, <PythonIcon />, <DartIcon />]
         },
         {
             title: "IOT",
             name: ["Arduino","Raspberry Pi"],
-            img: ["arduino", "raspberrypi"]
+            img: [ <ArduinoIcon />, <RaspberrypiIcon />]
         },
         {
             title: "Other",
             name: ["Github","Photoshop","Davinci Resolve", "Adobe After Effects", "Adobe XD", "Adobe Illustrator", "Blender (3D Animation Software)"],
-            img: ["github", "photoshop", "davinci", "afterEffects", "adobexd", "illustrator" ,"blender"]
+            img: [ <GithubIcon />, <PhotoshopIcon />, <DavinciIcon />, <AfterEffectsIcon />, <AdobexdIcon />, <IllustratorIcon /> ,<BlenderIcon />]
         }
     ], 
 }

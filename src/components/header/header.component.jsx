@@ -6,15 +6,15 @@ import { Navbar, Nav, Row, Col } from 'react-bootstrap';
 
 import './header.style.scss'
 
-export default function Header(props) {
+export default function Header({id, ...Data}) {
     return (
-        <div id={props.id} className="mb-5" >
-            <Hero name={props.name} description={props.description} img={props.img} />
+        <div id={id} className="mb-5" >
+            <Hero {...Data} />
         </div>
     );
 }
 
-function NavigationBar(props) {
+function NavigationBar({websiteName, ...Data}) {
 
     // Hook for Color
     const [ navColor, setNavColor ] = useState('transparent')
@@ -37,7 +37,7 @@ function NavigationBar(props) {
 
     return (
         <Navbar collapseOnSelect fixed="top" expand="lg" bg={navColorMedia ? navColor : 'light' } variant="light">
-            <Navbar.Brand href="#home"> {props.websiteName} </Navbar.Brand>
+            <Navbar.Brand href="#home"> {websiteName} </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto" />
@@ -51,7 +51,7 @@ function NavigationBar(props) {
     );
 }
 
-function Hero(props) {
+function Hero({...Data}) {
     return (
         <div id="home-section">
             <section className="hero text-center">
@@ -63,17 +63,17 @@ function Hero(props) {
                         
                     </Col>
                 </Row>
-                <HeroProfile name={props.name} description={props.description} img={props.img} />
+                <HeroProfile {...Data} />
             </section>
         </div>
     );
 }
 
-function HeroProfile(props) {
+function HeroProfile({name, description, img}) {
     return (
         <main className="imgSection">
-            <div className="imgContent" > I am <span>{props.name}</span> <p> {props.description} </p> </div>
-            <img alt="" src={props.img} />
+            <div className="imgContent" > I am <span>{name}</span> <p> {description} </p> </div>
+            <img alt="" src={img} />
         </main>
     )
 }
