@@ -16,9 +16,8 @@ export default function App() {
     return (
         <div>
             <Header id="home" websiteName={HeaderData.websiteName} name={HeaderData.name} description={HeaderData.description} img={HeaderData.img} />
-            <AboutMe id="about" PropsProjectsDone={AboutData.ProjectsDone} description={AboutData.description} cardData={AboutData.cardData} />
+            <AboutMe id="about" image={AboutData.image} PropsProjectsDone={AboutData.ProjectsDone} description={AboutData.description} cardData={AboutData.cardData} />
             <Skill id="skill" SkillData={SkillsData.SkillCardData} />
-
             <Footer id="footer" socialLinks={FooterData.socialLinks} />
         </div>
     );

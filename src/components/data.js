@@ -1,10 +1,12 @@
 import React from 'react';
 
-import webDev from '../assets/webdev.png'
-import mobDev from '../assets/mobdev.png'
-import desktopDev from '../assets/desktopdev.png'
+import webDev from '../assets/webdev-style1.png'
+import mobDev from '../assets/mobdev-style2.png'
+import desktopDev from '../assets/desktopdev-style1.png'
 import facebook from '../assets/facebook.png'
 import twitter from '../assets/twitter.png'
+import gmail from '../assets/gmail.png'
+import github from '../assets/githubsocial.png'
 
 // SVG
     import { ReactComponent as Html5Icon }          from '../assets/svg/html.svg';
@@ -53,6 +55,7 @@ const HeaderData = {
 const AboutData = {
     description:"Hey, there I am Samyak Joshi a Developer, born on 20 August 1999 as of currently working on self-development, learning, and working on projects with programming languages that always fascinated me. They are words but yet give you the power to bring life to machines.",
     ProjectsDone: 5,
+    image: testImg,
     cardData: [
         {
             center: true,
@@ -141,10 +144,20 @@ const FooterData = {
             href:"https://facebook.com/sam.joshi.927",
         },
         {
+            alt:"Mail",
+            img: gmail,
+            href: "mailto:joshi.samyak20@gmail.com"
+        },
+        {
             alt:"Twitter",
             img: twitter,
             href:"https://twitter.com/Skylar_Mark1",
         },
+        {
+            alt:"Github",
+            img: github,
+            href: "https://github.com/SkylarMark"
+        }
     ]
 }
 

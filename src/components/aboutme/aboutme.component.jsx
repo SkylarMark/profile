@@ -6,6 +6,9 @@ import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
+import { Link } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
+
 export default function AboutMe({id, ...Data}) {
     return(
         <div id={id} className="aboutMe pb-0 p-5">
@@ -14,7 +17,7 @@ export default function AboutMe({id, ...Data}) {
     );
 }
 
-function AboutBox({cardData, PropsProjectsDone, description}) {
+function AboutBox({cardData, PropsProjectsDone, description, image}) {
     return (
         <div>
             <div className="p-sm-5">
@@ -22,11 +25,14 @@ function AboutBox({cardData, PropsProjectsDone, description}) {
                 <h1  className="mt-4 pl-sm-3">About Me</h1>
                 <hr/>
                 <Row>
-                <Col className="order-lg-1 order-12" sm="12" lg="6"> 
-                    <ProjectsDone ProjectsDone={PropsProjectsDone} /> 
-                </Col>
-                    <Col className="order-lg-12 order-1" sm="12" lg="6" >
-                        <p className="mt-4 text-justify" >{description}</p>
+                    <Col className="order-12" sm="12" lg="12">
+                        <ProjectsDone ProjectsDone={PropsProjectsDone} />
+                    </Col>
+                    <Col className="order-1" sm="12" lg="6" >
+                        <img alt="" src={image} width="100%" />
+                    </Col>
+                    <Col className="order-1" sm="12" lg="6" >
+                        <Typography variant="h5" className="mt-4 pl-lg-4 text-left text-justify" >{description}</Typography>
                     </Col>
                 </Row>
             </div>
@@ -69,15 +75,17 @@ function IconCard({center, CardIcon, CardTitle, CardDescription}) {
 
 function ProjectsDone({ProjectsDone}) {
     return (
-        <div className="ProjectsDone p-3 mt-5">
+        <Link to='/projects' style={{ textDecoration: 'none' }}>
+        <div id="projects-done" className="ProjectsDone p-3 mt-5">
             <Row>
                 <Col>
                     <h1> Projects Done : {ProjectsDone} </h1>
                 </Col>
-                <Col id="projects-done" className="my-auto pr-5" xs="2">
-                    <h1> <FontAwesomeIcon icon={faCaretRight} /> </h1>
+                <Col className="my-auto pr-5" xs="2">
+                 <h1> <FontAwesomeIcon icon={faCaretRight} /> </h1> 
                 </Col>
             </Row>
         </div>
+        </Link>
     );
 }

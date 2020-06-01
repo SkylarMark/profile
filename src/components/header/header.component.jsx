@@ -72,7 +72,7 @@ function Hero({...Data}) {
 function HeroProfile({name, description, img}) {
     return (
         <main className="imgSection">
-            <div className="imgContent" > I am <span>{name}</span> <p> {description} </p> </div>
+            <div className="imgContent" > I am <span>{name}</span><p> {description} </p> </div>
             <img alt="" src={img} />
         </main>
     )

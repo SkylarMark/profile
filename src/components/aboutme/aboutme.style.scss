@@ -12,6 +12,11 @@ $primay: #0075f6;
         font-weight: 200;
     }
 
+    h5 {
+        line-height: 3rem;
+        color: grey;
+    }
+
     p {
         font-size: 1.8ex;
         color: grey;    
@@ -52,6 +57,10 @@ $primay: #0075f6;
 }
 
 #projects-done {
+    svg {
+        color: white;
+    }
+
     &:hover {
         svg {
             animation: repeat-leftRight 1s ease-in-out infinite;
